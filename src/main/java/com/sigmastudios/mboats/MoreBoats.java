@@ -1,6 +1,8 @@
 package com.sigmastudios.mboats;
 
 import com.sigmastudios.mboats.proxy.CommonProxy;
+import com.sigmastudios.mboats.tab.MoreBoatsTab;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -24,6 +26,8 @@ public class MoreBoats {
     public static final String CLProxy = "com.sigmastudios.mboats.proxy.ClientProxy";
     public static final String CProxy = "com.sigmastudios.mboats.proxy.CommonProxy";
 
+    public static MoreBoatsTab tab;
+
     @SidedProxy(clientSide = CLProxy, serverSide = CProxy)
     public static CommonProxy proxy;
 
@@ -35,6 +39,7 @@ public class MoreBoats {
         if (DEBUG) {
             LOGGER.info("Loading More Boats...");
         }
+        tab = new MoreBoatsTab(CreativeTabs.getNextID(), "mboats_tab");
         proxy.preInit(event);
     }
     public void init (FMLInitializationEvent event) {
