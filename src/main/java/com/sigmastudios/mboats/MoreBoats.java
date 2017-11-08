@@ -34,6 +34,7 @@ public class MoreBoats {
     @Mod.Instance
     public static MoreBoats instance;
 
+    @EventHandler
     public void preInit (FMLPreInitializationEvent event) {
         LOGGER = event.getModLog();
         if (DEBUG) {
@@ -42,9 +43,11 @@ public class MoreBoats {
         tab = new MoreBoatsTab(CreativeTabs.getNextID(), "mboats_tab");
         proxy.preInit(event);
     }
+    @EventHandler
     public void init (FMLInitializationEvent event) {
         proxy.init(event);
     }
+    @EventHandler
     public void postInit (FMLPostInitializationEvent event) {
         LOGGER.info("More Boats Loaded!");
         proxy.postInit(event);
