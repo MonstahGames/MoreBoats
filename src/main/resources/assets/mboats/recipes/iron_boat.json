@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "#i#",
+    "###"
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "mboats:iron_ingot"
+    },
+    "i":
+    {
+      "item": "mboats:boat_ingot"
+    }
+  },
+  "result": {
+    "item": "mboats:iron_boat"
+  }
+}
