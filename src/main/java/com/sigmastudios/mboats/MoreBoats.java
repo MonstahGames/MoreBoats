@@ -2,8 +2,10 @@ package com.sigmastudios.mboats;
 
 import com.sigmastudios.mboats.item.ModItems;
 import com.sigmastudios.mboats.item.ModSmelting;
+import com.sigmastudios.mboats.item.block.ModBlocks;
 import com.sigmastudios.mboats.proxy.CommonProxy;
 import com.sigmastudios.mboats.tab.MoreBoatsTab;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -42,6 +44,10 @@ public class MoreBoats {
 
     @Mod.EventBusSubscriber
     public static class RegistrationHandler {
+        @SubscribeEvent
+        public static void registerBlocks(RegistryEvent.Register<Block> event) {
+            ModBlocks.register(event.getRegistry());
+        }
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event) {
             ModItems.register(event.getRegistry());
