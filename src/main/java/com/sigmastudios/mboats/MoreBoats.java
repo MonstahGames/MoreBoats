@@ -1,6 +1,7 @@
 package com.sigmastudios.mboats;
 
 import com.sigmastudios.mboats.item.ModItems;
+import com.sigmastudios.mboats.item.ModSmelting;
 import com.sigmastudios.mboats.proxy.CommonProxy;
 import com.sigmastudios.mboats.tab.MoreBoatsTab;
 import net.minecraft.creativetab.CreativeTabs;
@@ -63,6 +64,7 @@ public class MoreBoats {
     }
     @EventHandler
     public void init (FMLInitializationEvent event) {
+        ModSmelting.init();
         proxy.init(event);
     }
     @EventHandler
