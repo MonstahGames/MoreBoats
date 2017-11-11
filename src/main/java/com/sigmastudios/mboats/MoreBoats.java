@@ -51,6 +51,7 @@ public class MoreBoats {
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event) {
             ModItems.register(event.getRegistry());
+            ModBlocks.registerItemBlocks(event.getRegistry());
         }
         @SubscribeEvent
         public static void registerItem (ModelRegistryEvent event) {
