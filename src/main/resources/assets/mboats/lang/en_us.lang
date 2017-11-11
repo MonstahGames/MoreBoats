@@ -1,1 +1,4 @@
 itemGroup.mboats_tab=More Boats
+item.boat_ingot.name=Boat Ingot
+item.iron_boat.name=Iron Boat
+tile.boat_ore.name=Boat Ore
