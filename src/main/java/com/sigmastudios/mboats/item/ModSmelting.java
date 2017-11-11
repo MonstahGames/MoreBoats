@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModSmelting {
 
     public static void init () {
-        //GameRegistry.addSmelting(ModItems.boatOre, new ItemStack(ModItems.boatIngot), 0.7F);
+        GameRegistry.addSmelting(ModItems.boatOre, new ItemStack(ModItems.boatIngot), 0.7F);
     }
 
 }
